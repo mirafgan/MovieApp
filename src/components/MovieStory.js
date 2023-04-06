@@ -5,13 +5,12 @@ import { NavLink } from 'react-router-dom'
 export default function MovieStory({ title, year, posterUrl, actors, director, runtime, plot, genres, imgError }) {
 
     return (
-        // <Container>
         <Col md={12}>
             <Card className='card-content'>
                 <Card.Header>
                     {title}
                 </Card.Header>
-                <NavLink to='/' className='ps-4'>Main Page</NavLink>
+                <NavLink to='/MovieApp' className='ps-4'>Main Page</NavLink>
                 <Card.Body className='d-flex'>
                     <div className='col-md-3'>
                         <div className='card-img'>
@@ -50,6 +49,5 @@ export default function MovieStory({ title, year, posterUrl, actors, director, r
                 </Card.Body>
             </Card>
         </Col>
-        // </Container>
     )
 }

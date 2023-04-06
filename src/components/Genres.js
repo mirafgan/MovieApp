@@ -6,7 +6,7 @@ function Genres({ genres }) {
     return (
         <Row gutter={16} className="pt-5">
             <Menu mode="vertical" >
-                {genres.map(item => <Menu.Item key={nanoid()} className={item.toLowerCase() === genre?.toLowerCase() ? 'ant-menu-item-selected' : ''} ><Link to={"/movies/" + item.toLowerCase() + '/page/1'} >{item}</Link></Menu.Item>)}
+                {genres.map(item => <Menu.Item key={nanoid()} className={item.toLowerCase() === genre?.toLowerCase() ? 'ant-menu-item-selected' : ''} ><Link to={"/MovieApp/movies/" + item.toLowerCase() + '/page/1'} >{item}</Link></Menu.Item>)}
             </Menu>
         </Row>
     )

@@ -11,10 +11,10 @@ export default function ContextProvider() {
     const router = createBrowserRouter(
         createRoutesFromElements(
             <>
-                <Route path="/" element={<MainLayout data={data} />} />
-                <Route path="/movies/all/page/:id" element={<MoviesByPage data={data} />} />
-                <Route path="/movies/:genre/page/:id" element={<MoviesbyGenre data={data} />} />
-                <Route path="/movie/:title" element={<MoviebyTitle data={data.movies} />} />
+                <Route path="/MovieApp" element={<MainLayout data={data} />} />
+                <Route path="/MovieApp/movies/all/page/:id" element={<MoviesByPage data={data} />} />
+                <Route path="/MovieApp/movies/:genre/page/:id" element={<MoviesbyGenre data={data} />} />
+                <Route path="/MovieApp/movie/:title" element={<MoviebyTitle data={data.movies} />} />
                 <Route path="*" element={<Tapilmadi />} />
 
             </>
@@ -25,28 +25,3 @@ export default function ContextProvider() {
 
     )
 }
-
-
-
-// [
-//     {
-//         path: "/", element: <Main data={data} />,
-//         children: [
-//             {
-//                 path: '/movies/all/page/:id'
-//             },
-//             {
-//                 path: '/movies/:genre',
-//                 children: [
-//                     { path: 'page/:id' }
-//                 ]
-//             }
-//         ]
-//     },
-//     {
-//         path: "/movie/:title", element: <MoviebyTitle data={data.movies} />
-//     },
-//     {
-//         path: "*", element: <Tapilmadi />
-//     }
-// ]

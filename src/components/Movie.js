@@ -8,7 +8,7 @@ function Movie({ title, year, posterUrl, actors, director, runtime, plot }) {
     const [imageLoad, setImageLoad] = useState(true)
     return (
         <Col xs={24} sm={8} md={6} >
-            <NavLink to={`/movie/${title.toLowerCase().split(' ').join('-')}`}>
+            <NavLink to={`/MovieApp/movie/${title.toLowerCase().split(' ').join('-')}`}>
                 <Skeleton loading={imageLoad} active />
                 <Card style={{visibility: !imageLoad ? 'visible' : 'hidden' }} hoverable cover={
                     <img loading="lazy" alt="example" src={posterUrl} onError={imgError} onLoad={() => setImageLoad(false)} />}>

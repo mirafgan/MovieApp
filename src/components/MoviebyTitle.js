@@ -3,7 +3,6 @@ import MovieStory from "./MovieStory";
 
 function MoviebyTitle({ data }) {
     const { title } = useParams();
-    console.log(title);
     return (
         <>
             {

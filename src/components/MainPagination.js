@@ -12,7 +12,7 @@ function MainPagination({ ttl, page, size, onShowSizeChange, onBlurSizeChange })
                 total={ttl}
                 onChange={onShowSizeChange}
                 showSizeChanger={false}
-                itemRender={(p, type, el) => type === 'page' ? <Link to={'/movies/' + (!genre ? 'all' : genre.toLowerCase()) + '/page/' + p}> {p} </Link> : el}
+                itemRender={(p, type, el) => type === 'page' ? <Link to={'/MovieApp/movies/' + (!genre ? 'all' : genre.toLowerCase()) + '/page/' + p}> {p} </Link> : el}
             />
             <Input
                 defaultValue={size}
