@@ -1,12 +1,15 @@
 import { useParams } from "react-router-dom";
 import MovieStory from "./MovieStory";
+import { useContext } from "react";
+import { movieContext } from "../data/context";
 
-function MoviebyTitle({ data }) {
+function MoviebyTitle() {
     const { title } = useParams();
+    const { data } = useContext(movieContext)
     return (
         <>
             {
-                data.filter(item => item.title.toLowerCase() === title.split('-').join(' ')).map(m =>
+                data?.movies.filter(item => item.title.toLowerCase() === title.split('-').join(' ')).map(m =>
                     <MovieStory {...m} key={m.id} imgError={imgError} />)
             }
         </>
